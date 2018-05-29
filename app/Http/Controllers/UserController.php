@@ -17,6 +17,8 @@ class UserController extends Controller
 
     public function signup()
     {
+        $config = get_db_config();
+        var_dump($config);exit();
         return view('users.signup');
 
     }

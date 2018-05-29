@@ -39,13 +39,13 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group @if($errors->has('passworkd_confirmation')) has-error @endif">
-                        <lable for="passworkd_confirmation" class="control-label col-md-2">确认密码</lable>
+                    <div class="form-group @if($errors->has('password_confirmation')) has-error @endif">
+                        <lable for="password_confirmation" class="control-label col-md-2">确认密码</lable>
                         <div class="col-md-6">
-                            <input type="password" name="passworkd_confirmation" class="form-control" placeholder="请输入确认密码"
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="请输入确认密码"
                                    value="">
-                            @if($errors->has('passworkd_confirmation'))
-                                <span class="help-block">{{$errors->first('passworkd_confirmation')}}</span>
+                            @if($errors->has('password_confirmation'))
+                                <span class="help-block">{{$errors->first('password_confirmation')}}</span>
                             @endif
                         </div>
                     </div>

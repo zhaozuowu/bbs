@@ -45,4 +45,15 @@ class UserController extends Controller
     {
         return view('users.show',compact('user'));
     }
+
+    public function register()
+    {
+        $user ="<div><h1>测试</h1></div>";
+        return view('users.register',compact('user'));
+    }
+
+    public function zhuce()
+    {
+        return view('users.zhuce');
+    }
 }

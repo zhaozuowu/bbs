@@ -1,4 +1,8 @@
 {
+    "/js/register.js": "/js/register.js",
+    "/js/zhuce.js": "/js/zhuce.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/zhuce.css": "/css/zhuce.css",
+    "/css/register.css": "/css/register.css"
 }

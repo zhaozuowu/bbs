@@ -16,8 +16,12 @@ Route::get('/about','StaticPageController@about')->name('about');
 Route::get('/help','StaticPageController@help')->name('help');
 Route::get('/signup','UserController@signup')->name('signup');
 Route::resource('/users','UserController');
+
 Route::get('/register','UserController@register');
 Route::get('/zhuce','UserController@zhuce');
 Auth::routes();
+
+Route::get('login','SessionController@login')->name('login');
+Route::post('login','SessionController@store')->name('login');
 
 Route::get('/home', 'HomeController@index')->name('home');

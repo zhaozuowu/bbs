@@ -13,6 +13,21 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/users', function (Request $request) {
-    return $request->user();
+$app = app('Dingo\Api\Routing\Router');
+
+$app->version("v2", [
+    'namespace' => 'App\Http\Controllers\Api',
+], function ($api) {
+
+    $api->group([
+        'middleware' => 'api.throttle',
+        'expires' => config('api.throttles.sign.expires'),
+        'limit' => config('api.throttles.sign.limit'),
+    ], function ($api) {
+        $api->post('captchas', 'CaptchasController@store')->name('api.captchas.store');
+        $api->post('verifacationCodes', 'VerifacationCodesController@store')->name('api.verifacationCodes.store');
+        $api->post('users', 'UsersController@store')->name('api.users.store');
+
+    });
+
 });

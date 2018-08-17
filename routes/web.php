@@ -14,11 +14,11 @@
 Route::get('/','StaticPageController@index')->name('home');
 Route::get('/about','StaticPageController@about')->name('about');
 Route::get('/help','StaticPageController@help')->name('help');
-Route::get('/signup','UserController@signup')->name('signup');
-Route::resource('/users','UserController');
+Route::get('/signup','UsersController@signup')->name('signup');
+Route::resource('/users','UsersController');
 
-Route::get('/register','UserController@register');
-Route::get('/zhuce','UserController@zhuce');
+Route::get('/register','UsersController@register');
+Route::get('/zhuce','UsersController@zhuce');
 Auth::routes();
 
 Route::get('login','SessionController@login')->name('login');

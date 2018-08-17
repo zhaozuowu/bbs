@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        return User::all();
+    }
     //
     /**
-     * UserController constructor.
+     * UsersController constructor.
      */
     public function __construct()
     {
